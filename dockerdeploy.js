@@ -17,7 +17,7 @@ const dockerPortRange = args[6];
 
     await removeOldImage();
 
-    await run("docker run -d -p " + dockerPortRange + "--name " + dockerImageName + " " + dockerImagePath);
+    await run("docker run -d -p " + dockerPortRange + " --name " + dockerImageName + " " + dockerImagePath);
 
     await run("docker ps");
 
